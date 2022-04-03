@@ -1,10 +1,21 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div id="app">
+    <NavBar />
+    <router-view/>
+  </div>
 </template>
+
+<script lang="ts">
+import { defineComponent } from 'vue';
+import NavBar from '@/components/NavBar.vue'; // @ is an alias to /src
+
+export default defineComponent({
+  name: 'HomeView',
+  components: {
+    NavBar,
+  },
+});
+</script>
 
 <style>
 #app {
