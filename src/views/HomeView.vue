@@ -8,7 +8,7 @@
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-      <div v-for="repo in repos" :key="repo.repoName" class="m-4 card">
+      <div v-for="repo in repos" :key="repo.repoName" class="m-3 card rounded-lg ">
         <repoCards
           :repoName="repo.repoName"
           :repoDescription="repo.repoDescription" 
@@ -60,3 +60,16 @@ export default defineComponent({
     
 });
 </script>
+
+<style lang="scss" scoped>
+.card{
+  transition: 1s;
+  background: linear-gradient(45deg, 
+  var(--c1, #e9e6db), 
+  var(--c2, #2b85da) 51%, 
+  var(--c1, #e9e8e4)) 
+  var(--x, 0)/ 200%;
+  
+}
+.card:hover{ --x: 100%; }
+</style>
