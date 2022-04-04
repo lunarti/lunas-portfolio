@@ -1,10 +1,22 @@
 <template>
   <div class="home">
     <h1 class="text-6xl m-4">
-      <span class="text-red-500">Victor Lunarti Valadão</span>
+      <span class="text-blue-500">Victor Lunarti Valadão</span>
     </h1>
-    
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <div class="flex items-center w-full">
+      <h1 class="mx-auto mt-10 text-xl md:text-5xl">GitHub Repos</h1>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <div v-for="repo in repos" :key="repo.repoName" class="m-4 card">
+        <repoCards
+          :repoName="repo.repoName"
+          :repoDescription="repo.repoDescription" 
+          :repoStarCount="repo.repoStarCount"
+          :repoUrl="repo.repoUrl"
+        />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -12,6 +24,7 @@
 import { defineComponent } from 'vue';
 import axios from "axios";
 import repoCards from "@/components/repoCards.vue"
+
 
 interface Repo {
   repoName: string,
@@ -21,6 +34,7 @@ interface Repo {
 }
 
 export default defineComponent({
+  components: { repoCards },
   name: 'HomeView',
   data() {
     return {
@@ -29,7 +43,8 @@ export default defineComponent({
   },
   mounted(){
     axios.get('https://api.github.com/users/lunarti/repos?sort=updated').then(response => {
-      response.data.slice(1,10).forEach((element: any) => {
+      console.log(response);
+      response.data.slice(0,10).forEach((element: { name: string; description: string; stargazers_count: number; html_url: string; }) => {
         this.repos.push({
           repoName: element.name,
           repoDescription: element.description,
