@@ -5,7 +5,7 @@
       <h2 ref="name">Eu sou Victor.</h2>
     </div>
     
-    <aside class="hero-image ml-20">
+    <aside class="hero-image lg:ml-20 mb-10 ">
       <img
         @mouseenter="imagePopup"
         @mouseleave="imagePopdown"
@@ -23,7 +23,6 @@ export default {
   mounted() {
     const greeting = this.$refs.greeting;
     const name = this.$refs.name;
-    const profession = this.$refs.profession;
     const img = this.$refs.img;
     const timeline = new TimelineLite();
     const tl = new TimelineLite();
