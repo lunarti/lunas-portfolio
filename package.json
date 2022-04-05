@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "deploy": "node deploy.js",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
@@ -22,6 +23,7 @@
     "vuex": "^4.0.0"
   },
   "devDependencies": {
+    "execa": "latest",
     "@types/chai": "^4.2.15",
     "@types/mocha": "^8.2.1",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
