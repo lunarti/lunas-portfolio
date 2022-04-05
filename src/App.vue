@@ -23,9 +23,8 @@ export default defineComponent({
 
 <style lang ="scss">
 
-@import url(https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap);
 #app {
- font-family: 'Press Start 2P', cursive;
+ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-align: center;
     color: #2c3e50;
 }

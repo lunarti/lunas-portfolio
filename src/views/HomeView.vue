@@ -1,9 +1,9 @@
 <template>
   <div class="home">
-    <h1 class="text-6xl m-4">
-      <span class="text-blue-500">Victor Lunarti Valadão</span>
-    </h1>
-    <div class="flex items-center w-full">
+    <div class="hero mt-10">
+      <HeroCard/>
+    </div>
+       <div class="flex items-center w-full">
       <h1 class="mx-auto mt-10 text-xl md:text-5xl">GitHub Repos</h1>
     </div>
 
@@ -24,6 +24,7 @@
 import { defineComponent } from 'vue';
 import axios from "axios";
 import repoCards from "@/components/repoCards.vue"
+import HeroCard from "@/components/HeroCard.vue"
 
 
 interface Repo {
@@ -34,7 +35,7 @@ interface Repo {
 }
 
 export default defineComponent({
-  components: { repoCards },
+  components: { repoCards,HeroCard },
   name: 'HomeView',
   data() {
     return {

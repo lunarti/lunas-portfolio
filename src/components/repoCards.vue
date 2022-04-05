@@ -19,7 +19,7 @@
     </div>
   </t-card>
 </template>
-<style lang ="scss" scoped></style>
+
 <script lang="ts">
 import { defineComponent } from 'vue';
 
@@ -38,3 +38,12 @@ export default defineComponent({
   },
 });
 </script>
+
+<style lang ="scss" scoped>
+@import url(https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap);
+t-card {
+ font-family: 'Press Start 2P', cursive;
+  text-align: center;
+    color: #2c3e50;
+}
+</style>
