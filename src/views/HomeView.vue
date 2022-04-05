@@ -3,6 +3,13 @@
     <div class="hero mt-10">
       <HeroCard/>
     </div>
+    <div class="w-full flex justify-center">
+      <p class="w-2/3 text-2xl text-justify mt-10">
+      Bacharel em Engenharia Elétrica, pretende se especializar em Desenvolvimento de Software e Hardware.
+      Tem como objetivo a confecção de projetos que desenvolvam as seguintes habilidades: Multithread e FreeRTOSes, NodeJS, Websockets.
+      Apaixonado pela Cultura Maker, faz projetos de Impressão 3D e IoT com Tasmota, EspHome e Home Assistant.
+      </p>
+    </div>
        <div class="flex items-center w-full">
       <h1 class="mx-auto mt-10 text-xl md:text-5xl">GitHub Repos</h1>
     </div>

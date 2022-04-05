@@ -83,13 +83,13 @@ h1 {
 }
 h2 {
   margin: 0;
-  font-size: clamp(62px, 8vw, 140px);
+  font-size: clamp(100px, 8vw, 140px);
   font-weight: 900;
 }
 img {
   border: 10px solid rgb(87, 63, 190);
   border-radius: 50%;
-  width: clamp(200px, 20vw, 20vw);
+  width: clamp(200px, 15vw, 20vw);
 }
 
 
